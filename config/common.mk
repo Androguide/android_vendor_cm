@@ -95,11 +95,6 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/cm/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
-# Terminal Emulator
-#PRODUCT_COPY_FILES +=  \
-#    vendor/cm/proprietary/Term.apk:system/app/Term.apk \
-#    vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
-
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/cm/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
@@ -117,35 +112,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
-# T-Mobile theme engine
-include vendor/cm/config/themes_common.mk
 
 # Required CM packages
 PRODUCT_PACKAGES += \
-    Camera \
-    Development \
-    LatinIME \
-    Superuser \
     su
-
-# Optional CM packages
-PRODUCT_PACKAGES += \
-    VideoEditor \
-    VoiceDialer \
-    SoundRecorder \
-    Basic
-
-# Custom CM packages
-PRODUCT_PACKAGES += \
-    Trebuchet \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf \
-    CMWallpapers \
-    Apollo \
-    CMUpdater \
-    CMFileManager \
-    LockClock
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
